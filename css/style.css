@@ -582,6 +582,14 @@ nav ul{
     gap: 20px;
 }
 }
+@media only screen and (max-width:950px){
+  nav{
+    gap:130px;
+  }   
+  nav ul{
+    gap: 15px;
+}
+}
 @media only screen and (max-width:900px){
     nav .icon i {
         display: block;
@@ -656,7 +664,8 @@ nav ul{
     
     .table{
         width: auto;
-       
+    align-self: center;
+    justify-self: center;
         overflow-x: scroll;
          display: flex;
          justify-content: center;
@@ -671,7 +680,7 @@ nav ul{
     .amount .card2{
         
         align-items:center;
-        justify-content:center;
+        justify-content:start;
         gap: 50px;
     }
     form{
@@ -681,26 +690,30 @@ nav ul{
         flex-direction: column;
         align-items:center;
         justify-content:center;
-        width: 80%;
+        align-self: center;
+        width: 100%;
+        justify-self: center;
         /* margin: 10px; */
     }
     .form .form-right{
         width: 80%;
-        padding-left: 50px;
+        display: flex;
+        align-self: center;
+        justify-self: center;
+        align-items: center;
     }
     .form  .form-left{
         width: 80%;
         align-self: center;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        
     }
    
     .form iframe{
         width: 100%;
     }
     .footer{
-        flex-direction: column;
+        
         width: 100%;
         align-items: center;
         justify-content: center;
