@@ -648,7 +648,7 @@ nav ul{
         border-left: none;
      }
     .table{
-        width: 80%;
+        width: 100%;
         overflow-x: scroll;
          display: flex;
          justify-content: center;
