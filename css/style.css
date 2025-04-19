@@ -332,7 +332,6 @@ tr th{
 table{
     background-color: rgb(26, 22, 22);
     color: white;
-    
      width: 80%;
      
 }
@@ -592,8 +591,7 @@ nav ul{
         display: flex;
         align-items: space-between;
         justify-content: space-between;
-        width: 100%;
-      
+        width: 90%;
        
       }
    
@@ -653,8 +651,10 @@ nav ul{
         width: 90%;
         border-left: none;
      }
+    
     .table{
-        width: 100%;
+        width: auto;
+       
         overflow-x: scroll;
          display: flex;
          justify-content: center;
@@ -688,7 +688,10 @@ nav ul{
     }
     .form  .form-left{
         width: 80%;
-        padding-left: 150px;
+        align-self: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
    
     .form iframe{
@@ -705,33 +708,44 @@ nav ul{
     }
  }
  @media only screen and (max-width:650px){
+    table{
+         padding-left:40px; 
+    }
+ }
+ @media only screen and (max-width:600px){
     .table{
-        padding-left:40px;
+         padding-left:60px; 
     }
  }
  @media only screen and (max-width:550px){
     .table{
-        padding-left:60px;
+        padding-left:80px; 
     }
  }
  @media only screen and (max-width:500px){
     .table{
-        padding-left:80px;
+        width: auto;
+         padding-left: 150px;
+        /* padding-right:10%;
+         padding: 100px 200px;  */
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
+    
  }
  @media only screen and (max-width:450px){
     .table{
-        padding-left: 120px;
-        padding-right:10%;
+         padding-left:200px;
     }
  }
  @media only screen and (max-width:400px){
     .table{
-        padding-left:150px;
+         padding-left:250px;
     }
  }
  @media only screen and (max-width:350px){
     .table{
-        padding-left:170px;
+         padding-left:300px;
     }
  }
