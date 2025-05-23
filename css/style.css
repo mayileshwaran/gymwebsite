@@ -54,6 +54,7 @@ nav ul{
     display: flex;
     list-style: none;
     gap: 25px;
+    /* transition-duration: 0.7s; */
     color: white;
 }
 nav ul a{
@@ -265,7 +266,9 @@ nav i{
      justify-content: space-between;
 }
   
-
+.cards-left h1{
+    text-align: center;
+}
 
     .cardd ul{
         list-style: none;
@@ -278,18 +281,20 @@ nav i{
 .card .instruct{
     position :relative;
     left: -10%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 .social-icon{
     list-style: none;
     color: gray;
-    gap: 2px;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    
 
 }
-.social-icon li{
-    color: gray;
-    display: flex;
-    
-}
+
 .cards-right h4{
     display: inline;
     align-content:  start;
@@ -325,6 +330,9 @@ nav i{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.heading {
+    text-align: center;
 }
 
 .amount .card{
@@ -680,6 +688,7 @@ nav ul{
     nav ul{
         gap: 20px;
         position: absolute;
+       
         top: 90px;
         flex-direction: column;
         background-color: black;
@@ -692,12 +701,13 @@ nav ul{
     .banner{
          background-position: center;
          align-items: center;
+         justify-content: center;
          justify-self: center;
-        width: 90%;
+        width: 80%;
         height: 80%;
-
+        padding-right:10% ;
         padding-left: 10%;
-        padding-top: 50px;
+         padding-top: 60px; 
     }
     /* .banner p{
          display: flex;
@@ -789,7 +799,7 @@ nav ul{
         /* margin: 10px; */
     }
     .form .form-right{
-        width: 80%;
+        width: 70%;
         display: flex;
         
         justify-self: start;
@@ -878,6 +888,9 @@ nav ul{
         align-items: start;
         justify-content: start;
       }
+      .form h1{
+        font-size: 20px;
+      }
       .footer{
         width: 100%;
       }
@@ -912,8 +925,9 @@ nav ul{
     .table{
          padding-left:200px;
     }
+    
     .banner h1{
-        font-size: 40px;
+        font-size: 30px;
     }
     .about-banner{
         height: 70%;
@@ -933,6 +947,9 @@ nav ul{
     .table{
          padding-left:250px;
     }
+    .logo{
+        font-size: 11px;
+     }
  }
  @media only screen and (max-width:350px){
     .table{
@@ -941,5 +958,6 @@ nav ul{
     .heading{
         padding-left: 10%;
         padding-right:10%;
+
         }
  }
