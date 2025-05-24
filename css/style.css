@@ -55,6 +55,7 @@ nav ul{
     display: flex;
     list-style: none;
     gap: 25px;
+    transition-duration: 3s;
     /* transition-duration: 0.7s; */
     color: white;
 }
@@ -153,6 +154,8 @@ nav ul .social-media{
    display: flex;
    flex-direction: column;
    gap: 20px;
+   align-items: start;
+   justify-content: start;
     padding-right: 50px;
 
 }
@@ -164,6 +167,7 @@ nav ul .social-media{
 .timsec-left h{
     color: white;
     font-size: 20px;
+    align-self: start;
 }
 .timsec-right{
     width: 30%;
@@ -429,10 +433,13 @@ tr:nth-child(3) td:nth-last-child(1){
     display: flex;
     align-self: center;
 }
-.table p{
+.table-section p{
     display: flex;
     align-self: center;
     color: gray;
+}
+.table-section h1{
+    color: white;
 }
 .ter-but{
      background-color: rgb(26, 22, 22);
@@ -652,7 +659,31 @@ form textarea{
 .schedule-banner h1{
     color: white;
 }
-
+.table-section{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px ;
+    
+  background-color: rgb(26, 22, 22);
+}
+.ter-but:hover{
+background-color: orangered;
+color: white;
+}
+.pri-but:hover{
+    background-color: white;
+    color: orangered;
+    border: none;
+}
+.button:hover{
+    color: orangered;
+}
+html {
+  scroll-behavior: smooth;
+}
 @media only screen and (max-width:1200px){
 nav{
     justify-content: center;
@@ -710,13 +741,14 @@ nav ul{
     nav ul{
         gap: 20px;
         position: absolute;
-       
+      
         top: 90px;
         flex-direction: column;
         background-color: black;
         width: 50%;
         align-items: start;
         top: -250px;
+        left: 40px;
         z-index: 4;
     }
 
@@ -738,7 +770,7 @@ nav ul{
     } */
     .card-center{
         align-items: center;
-        justify-content: start;
+        justify-content: center;
         align-self: center;
         width: 90%;
     }
@@ -762,7 +794,7 @@ nav ul{
         top: 90px;
        left: 40PX;
        padding: 20px;
-        transition-duration: 7ms;}
+       }
 
     .timsec{
         
@@ -789,7 +821,7 @@ nav ul{
      
     .table{
         width: auto;
-
+        padding-top: 50px;
         overflow-x: scroll;
          display: flex;
          justify-content: center;
@@ -843,11 +875,17 @@ nav ul{
         width: 100%;
         align-items: center;
         justify-content: center;
+        
+        flex-direction: column-reverse;
     }
-    .footer .left-foot{
-        flex-direction: column;
-      
+    .footer.left-foot{
+        width: 90%;
     }
+     .footer .right-foot{
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+      }
  }
  @media only screen and (max-width:767px){
     .card-center .cards-right{
@@ -901,6 +939,7 @@ nav ul{
  @media only screen and (max-width:650px){
     table{
          padding-left:40px; 
+          padding-right: 40px;
     }
   
  }
@@ -909,6 +948,7 @@ nav ul{
          padding-left:60px; 
         align-items: start;
         justify-content: start;
+       
       }
       .form h1{
         font-size: 20px;
@@ -916,15 +956,8 @@ nav ul{
       .footer{
         width: 100%;
       }
-      .footer .left-foot {
-        width: 90%;
-        
-      }
-      .footer .right-foot{
-        width: 90%;
-        align-items: start;
-        justify-content: start;
-      }
+      
+    
  }
  @media only screen and (max-width:550px){
     .table{
@@ -934,7 +967,7 @@ nav ul{
  @media only screen and (max-width:500px){
     .table{
         width: auto;
-         padding-left: 150px;
+         padding-left: 300px;
         /* padding-right:10%;
          padding: 100px 200px;  */
         display: flex;
@@ -948,7 +981,7 @@ nav ul{
  }
  @media only screen and (max-width:450px){
     .table{
-         padding-left:200px;
+         padding-left:300px;
     }
     
     
@@ -971,15 +1004,22 @@ nav ul{
  }
  @media only screen and (max-width:400px){
     .table{
-         padding-left:250px;
+         padding-left:310px;
     }
     .logo{
         font-size: 11px;
      }
+     .left-foot{
+        flex-direction: column;
+        width: 90%;
+        align-items: start;
+        justify-content: start;
+     }
  }
  @media only screen and (max-width:350px){
     .table{
-         padding-left:300px;
+         padding-left:330px;
+        
     }
     .heading{
         padding-left: 10%;
