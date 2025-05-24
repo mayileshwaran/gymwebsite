@@ -941,6 +941,9 @@ nav ul{
         align-items: center;
         justify-content: center;
     }
+    .banner h1{
+        font-size: 30px;
+    }
     
  }
  @media only screen and (max-width:450px){
@@ -948,9 +951,7 @@ nav ul{
          padding-left:200px;
     }
     
-    .banner h1{
-        font-size: 30px;
-    }
+    
      .about-banner{
         height: 40%;
     }
