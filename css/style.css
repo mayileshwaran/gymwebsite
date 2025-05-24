@@ -676,7 +676,7 @@ color: white;
 .pri-but:hover{
     background-color: white;
     color: orangered;
-    border: none;
+    border-color:white;
 }
 .button:hover{
     color: orangered;
