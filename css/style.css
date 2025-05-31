@@ -55,8 +55,8 @@ nav ul{
     display: flex;
     list-style: none;
     gap: 25px;
-    transition-duration: 3s;
-    /* transition-duration: 0.7s; */
+    transition-duration: 0.7s;
+    
     color: white;
 }
 nav ul a{
@@ -86,6 +86,7 @@ nav ul .social-media{
     background-repeat: no-repeat;
     background-size: cover;
     gap: 5px;
+    margin-top: 90px;
 
     /* margin-bottom: 50px; */
     align-self: bottom;
@@ -568,6 +569,7 @@ form textarea{
     background-repeat: no-repeat;
     background-size: cover;
     gap: 5px;
+    margin-top: 90px;
     background-position: center;
     object-fit: cover;
     object-position: center;
@@ -593,7 +595,7 @@ form textarea{
     background-repeat: no-repeat;
     background-size: cover;
     gap: 5px;
-    
+    margin-top: 90px;
     /* margin-bottom: 50px; */
     align-self: bottom;
     padding-bottom: 20px;
@@ -617,6 +619,7 @@ form textarea{
     background-repeat: no-repeat;
     background-size: cover;
     gap: 5px;
+    margin-top: 90px;
     /* margin-bottom: 50px; */
     align-self: bottom;
     padding-bottom: 20px;
@@ -652,6 +655,7 @@ form textarea{
     background-repeat: no-repeat;
     background-size: cover;
     gap: 5px;
+    margin-top: 90px;
     /* margin-bottom: 50px; */
     align-self: bottom;
     padding-bottom: 20px;
@@ -741,7 +745,7 @@ nav ul{
     nav ul{
         gap: 20px;
         position: absolute;
-      
+        transition-duration: 0.7s;
         top: 90px;
         flex-direction: column;
         background-color: black;
@@ -793,7 +797,7 @@ nav ul{
     #nav:checked~ul{
         top: 90px;
        left: 40PX;
-       padding: 20px;
+       padding:px;
        }
 
     .timsec{
@@ -853,16 +857,16 @@ nav ul{
         /* margin: 10px; */
     }
     .form .form-right{
-        width: 70%;
+        width: 90%;
         display: flex;
         
         justify-self: start;
         align-items: start;
     }
     .form  .form-left{
-        width: 70%;
+        width: 90%;
         align-items: start;
-        justify-content: start;
+        justify-content: center;
         align-self: center;
         display: flex;
         
@@ -1014,6 +1018,9 @@ nav ul{
         width: 90%;
         align-items: start;
         justify-content: start;
+     }
+     .amount{
+        gap: 50px;
      }
  }
  @media only screen and (max-width:350px){
