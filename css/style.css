@@ -271,6 +271,7 @@ nav i{
     gap: 60px; */
      align-items: center;
      justify-content: space-between;
+     
 }
   
 .cards-left h1{
@@ -291,6 +292,8 @@ nav i{
     display: flex;
     flex-direction: column;
     gap: 5px;
+        padding-bottom: 10px;
+
 }
 .social-icon{
     list-style: none;
@@ -354,7 +357,7 @@ nav i{
     margin-left: 5px;
     height: 460px;
     margin-right: 5px;
-    
+    padding-bottom: 20px;
     box-shadow: 6px 0 38px rgba(20, 20, 20,0.10)
   }
  .card .det{
@@ -362,7 +365,7 @@ nav i{
   
   }
 .det-2{
-    padding: 0px 20px 0px 20px;
+    padding: 0px 20px 20px 20px;
     display: flex;
     flex-direction: column;
 
@@ -721,6 +724,7 @@ nav ul{
     }
     .banner{
         height: 60vh;
+        gap: 20px;
     }
    .about-banner{
         height: 60%;
@@ -754,6 +758,7 @@ nav ul{
         top: -250px;
         left: 40px;
         z-index: 4;
+        padding: 20px;
     }
 
     .banner{
