@@ -1,9 +1,10 @@
-/* body{
+body{
     overflow-x: hidden;
-} */
+}
 *{
     padding: 0px;
     margin: 0px;
+
     /* box-sizing: border-box; */
 }
 .active a{
@@ -38,14 +39,14 @@ nav{
     display: flex;
     gap: 300px;
     background-color: black;
-    width: 100%;
     align-items: center;
     justify-content: center;
     position: fixed;
     top: 0px;
     height: 50px;
     align-self: center;
-    padding: 20px;
+    width: 97%;
+    padding: 2%;
     z-index: 2;
 }
 nav h1{
@@ -86,7 +87,7 @@ nav ul .social-media{
     background-repeat: no-repeat;
     background-size: cover;
     gap: 5px;
-    margin-top: 90px;
+    margin-top: 10px;
 
     /* margin-bottom: 50px; */
     align-self: bottom;
@@ -257,6 +258,7 @@ nav i{
     display: flex;
     justify-content: space-between;
     padding: 5px 10px;
+    width: 90%;
     /* position:absolute;
     bottom: 15px;
     left:15px;
@@ -264,6 +266,7 @@ nav i{
 }
 .cards-right .cardd {
     display: flex;
+    width: 90%;
     padding: 5px 10px;
     /* position:absolute;
     bottom: 15px;
@@ -517,8 +520,8 @@ form textarea{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    width: 100%;
-    padding: 50px 0px 50px 0px;
+    width: 90%;
+     padding: 50px 0px 50px 0px; 
     border-top: 1px gray solid;
 }
 
@@ -544,7 +547,7 @@ form textarea{
     display: flex;
     
     gap: 20px;
-    padding: 20px;
+  
 
 }
 .footer .right-foot a{
@@ -555,7 +558,8 @@ form textarea{
 
 .card2 .card .det{
     display: flex;
-    gap: 100px;
+    width: 90%;
+   justify-content: space-between;
 }
 .about-banner{
     display: flex;
@@ -572,7 +576,7 @@ form textarea{
     background-repeat: no-repeat;
     background-size: cover;
     gap: 5px;
-    margin-top: 90px;
+    padding-top: 90px;
     background-position: center;
     object-fit: cover;
     object-position: center;
@@ -580,6 +584,7 @@ form textarea{
     align-self: bottom;
     padding-bottom: 20px;
 }
+
 .about-banner h1{
       color: white;
 }
@@ -598,7 +603,7 @@ form textarea{
     background-repeat: no-repeat;
     background-size: cover;
     gap: 5px;
-    margin-top: 90px;
+    padding-top: 90px;
     /* margin-bottom: 50px; */
     align-self: bottom;
     padding-bottom: 20px;
@@ -622,7 +627,7 @@ form textarea{
     background-repeat: no-repeat;
     background-size: cover;
     gap: 5px;
-    margin-top: 90px;
+ padding-top: 90px;
     /* margin-bottom: 50px; */
     align-self: bottom;
     padding-bottom: 20px;
@@ -658,7 +663,7 @@ form textarea{
     background-repeat: no-repeat;
     background-size: cover;
     gap: 5px;
-    margin-top: 90px;
+    padding-top: 90px;
     /* margin-bottom: 50px; */
     align-self: bottom;
     padding-bottom: 20px;
@@ -691,6 +696,9 @@ color: white;
 html {
   scroll-behavior: smooth;
 }
+.tim{
+    width: 80%;
+}
 @media only screen and (max-width:1200px){
 nav{
     justify-content: center;
@@ -704,6 +712,7 @@ nav{
 nav{
     gap:150px;
     justify-content: center;
+    
 }
 nav ul{
     gap: 20px;
@@ -711,10 +720,21 @@ nav ul{
 }
 @media only screen and (max-width:950px){
   nav{
-    gap:130px;
+    gap:100px;
+     width: 97%;
+     padding: 3%;
+    
   }   
   nav ul{
     gap: 15px;
+}
+.form{
+     align-items:center;
+        justify-content:center;
+        align-self: center;
+        width: 100%;
+        gap:100px;
+        justify-self: center;
 }
 }
 @media only screen and (max-width:900px){
@@ -741,9 +761,12 @@ nav ul{
     }
     nav{
         display: flex;
-        align-items: space-between;
-        justify-content: space-between;
-        width: 100%;
+        align-items: center;
+        justify-content: space-around;
+         width: 100%;
+         /* gap: 20%; */
+         padding: 20px ,0px , 20px, 0px; 
+         
       }
    
     nav ul{
@@ -756,7 +779,7 @@ nav ul{
         width: 50%;
         align-items: start;
         top: -250px;
-        left: 40px;
+        left: 10%;
         z-index: 4;
         padding: 20px;
     }
@@ -766,11 +789,14 @@ nav ul{
          align-items: center;
          justify-content: center;
          justify-self: center;
-        width: 80%;
+        width: 100%;
       
-        padding-right:10% ;
-        padding-left: 10%;
+        /* padding-right:10% ;
+        padding-left: 10%; */
          padding-top: 60px; 
+    }
+    .banner p{
+        width: 90%;
     }
     /* .banner p{
          display: flex;
@@ -800,8 +826,8 @@ nav ul{
         width: 100%;
     }
     #nav:checked~ul{
-        top: 90px;
-       left: 40PX;
+        top: 70px;
+       left: 10%;
        padding:px;
        }
 
@@ -881,19 +907,20 @@ nav ul{
         width: 100%;
     }
     .footer{
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-        
+        width: 90%;
+        align-items: start;
+        justify-content: start;
+        padding-left:10%;
+        gap: 20px;
         flex-direction: column-reverse;
     }
     .footer.left-foot{
-        width: 90%;
+        width: 60%;
     }
      .footer .right-foot{
         width: 90%;
-        align-items: center;
-        justify-content: center;
+        align-items: start;
+        justify-content: start;
       }
  }
  @media only screen and (max-width:767px){
@@ -963,9 +990,16 @@ nav ul{
         font-size: 20px;
       }
       .footer{
-        width: 100%;
+        width: 90%;
+        gap: 20px;
       }
-      
+      .left-foot{
+        flex-direction: column;
+        width: 60%;
+        align-items: start;
+        justify-content: start;
+     }
+     
     
  }
  @media only screen and (max-width:550px){
@@ -990,24 +1024,44 @@ nav ul{
  }
  @media only screen and (max-width:450px){
     .table{
-         padding-left:300px;
+         /* width: 100%; */
+         padding: 0px;
+         padding-left: 200px;
     }
-    
+     #nav:checked~ul{
+        top: 60px;
+       left: 30PX;
+       padding:px;
+       }
+     .table-section{
+        padding-bottom: 50px;
+     }
     
      .about-banner{
         height: 40%;
+         /* padding-right:10% ; */
+        /* padding-left: 10%; */
+        width: 100%;
     }
     .classes-banner{
         height: 40%;
+        width: 100%;
     }
     .contact-banner{
         height: 40%;
+        width: 100%;
     }
     .schedule-banner{
         height: 40%;
         background-position: top;
+        width:100% ;
     }
-    /* .banner{
+    .banner{
+        width: 100%;
+        padding: 20px ,px, 0px, 0px;
+      
+    }
+      /* .banner{
         height: 55vh;
     } */
  }
@@ -1018,24 +1072,24 @@ nav ul{
     .logo{
         font-size: 11px;
      }
-     .left-foot{
-        flex-direction: column;
-        width: 90%;
-        align-items: start;
-        justify-content: start;
-     }
+     
      .amount{
         gap: 50px;
      }
  }
  @media only screen and (max-width:350px){
     .table{
-         padding-left:330px;
-        
+         padding-left:100%;
+      
     }
     .heading{
         padding-left: 10%;
         padding-right:10%;
 
         }
+        #nav:checked~ul{
+        top: 60px;
+       left: 10PX;
+       padding:px;
+       }
  }
