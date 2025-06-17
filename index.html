@@ -1,567 +1,316 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mayileshwaran Portfolio</title>
-  <link rel="shortcut icon" href="./favicon.jpg" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <style>
-    body {
-      position: relative;
-      scroll-behavior: smooth;
-      background-color: #ffffff;
-    }
-    .profile-img {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-    .section-title {
-      margin-bottom: 1rem;
-      font-weight: bold;
-      font-size: 1.5rem;
-    }
-    #home {
-      padding-top: 6rem;
-      padding-bottom: 4rem;
-      background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('./images/parallax-bg.jpg') center center/cover no-repeat fixed;
-    }
-    #home h1 {
-      font-size: 3rem;
-    }
-    #home p {
-      font-size: 1.25rem;
-    }
-    footer {
-      background-color: #007bff;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-      margin-top: 2rem;
-    }
-    .navbar {
-      background-color: #007bff !important;
-    }
-    .navbar .nav-link, .navbar .navbar-brand {
-      color: white !important;
-    }
-    .skill-card {
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 1rem;
-      text-align: center;
-      transition: transform 0.3s;
-    }
-    .skill-card:hover {
-      transform: scale(1.05);
-    }
-    .skill-icon {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-      color: #007bff;
-    }
-
-    /* Animations */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 1s ease;
-    }
-    .fade-in.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Return to Top Button */
-    #topBtn {
-      display: none;
-      position: fixed;
-      bottom: 20px;
-      right: 30px;
-      z-index: 99;
-      font-size: 20px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      padding: 12px;
-      border-radius: 50%;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
-    #topBtn:hover {
-      background-color: #0056b3;
-    }
-    #skills {
-  opacity: 0;
-  transform: translateY(100px);
-  transition: all 0.8s ease-out;
-}
-
-#skills.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.skill-card {
-  opacity: 0;
-  transform: translateX(100px);
-  transition: all 0.8s ease-out;
-}
-
-.skill-card.left {
-  transform: translateX(-100px);
-}
-
-.skill-card.show {
-  opacity: 1;
-  transform: translateX(0);
-}
-/* Projects section animation */
-#projects {
-  opacity: 0;
-  transform: translateY(100px);
-  transition: all 0.8s ease-out;
-}
-
-/* When in view */
-#projects.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-/* Studies section animation */
-#studies {
-  opacity: 0;
-  transform: translateY(100px);
-  transition: all 0.8s ease-out;
-}
-
-/* When in view */
-#studies.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-/* Common animation for cards */
-.reveal-card {
-  opacity: 0;
-  transform: translateY(60px);
-  transition: all 0.7s ease;
-}
-
-.reveal-card.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gymso-Home Page</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==
+     " crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="shortcut icon" href="./images/fav.png" type="image/x-icon">
 </head>
-<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70" tabindex="0">
-  <!-- Navbar -->
-  <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand ms-5" href="#home"> Mayileshwaran's Portfolio</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto me-5">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#studies">Studies</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
+
+<body>
+    <nav>
+        <div class="logo">
+            <h1>Gymso Fitness</h1>
+        </div>
+
+        <div class="icon">
+            <label for="nav"> <i class="fa-solid fa-bars"></i></label>
+            <input type="checkbox" id="nav">
+            <Ul>
+                <li class="active"><a href="./index.html">HOME</a></li>
+                <li><a href="./about.html">ABOUT US</a></li>
+                <li><a href="./classes.html">CLASSES</a></li>
+                <li><a href="./schedule.html">SCHEDULES</a></li>
+                <li><a href="./contact.html">CONTACT</a></li>
+            </Ul>
+            <div class="social-media">
+                <ul>
+                    <li><a href="https://www.facebook.com/login/" target="_blank"> <i
+                                class="fa-brands fa-facebook"></i></a></li>
+                    <li> <a href="https://x.com/i/flow/login?lang=en" target="_blank"> <i
+                                class="bi bi-twitter-x log"></i></a></li>
+                    <li> <a href="https://www.instagram.com/accounts/login/?hl=en" target="_blank"> <i
+                                class="fa-brands fa-square-instagram"></i></a></li>
+                </ul>
+            </div>
+
+
+        </div>
+    </nav>
+
+    <div class="banner">
+        <p>new way to build a healthy lifestyle!</p>
+        <h1>Upgrade your body at Gymso Fitness </h1>
+        <div class="button">
+            <a href="#start">
+                <h> Get Started</h>
+            </a>
+            <a href="#learn">
+                <div class="pri-but">Learn More</div>
+            </a>
+        </div>
     </div>
-  </nav>
+    <div class="timsec" id="start">
+        <div class="timsec-left"> 
+            <h1 >New to the gymso?</h1>
+            <h>Your membership is up to 2 months FREE (₹650 per month)</h>
+            <p>Topics can range from exercise techniques and nutrition tips to the science</p>
+                <a href="#">
+                    <div class="sec-but">Become a member today</div>
+             </a>
+        </div>
+        <div class="timsec-right" >
+            <h1>Working hours</h1>
+            <h>Sunday : Closed</h><br><br>
 
-  <!-- Home -->
-  <section id="home" class="container py-md-5 fade-in">
-    <div class="row align-items-center flex-column-reverse flex-md-row">
-      <div class="col-md-7 text-center text-md-start py-md-5">
-        <h1 class="display-4 fw-bold">Mayileshwaran Deivendran</h1>
-        <h5 class="display-4 fw-semibold ">Full Stack Web Developer</h5>
-        <p class="lead">I am a Full Stack Web Developer passionate about building complete and responsive web applications.
-          Currently pursuing my Postgraduate degree in Computer Applications.
-          Focused on enhancing my skills in full-stack development, and advanced backend systems.
-          Actively working on real-world projects to bridge academic learning with industry needs.</p>
-      </div>
-      <div class="col-md-5 img text-center px-0 py-md-5">
-        <img src="./download (1).png" alt="Profile" class="img-fluid py-5 w-md-50 mx-auto d-block" style="max-width: 250px;">
-      </div>
+            <h>Monday - Friday</h>
+            <p>7:00 AM - 10:00 PM</p>
+            <h>Saturday</h>
+            <p>6:00 AM - 4:00 PM</p>
+        </div>
     </div>
-  </section>
+    <div class="cards" id="learn">
+        <div class="cards-left">
+            <h1>Hello, we are Gymso</h1>
+            <p>The word is derived from the ancient Greek term
+                "gymnasion". They are commonly found in athletic
+                and fitness centres, and as activity and learning spaces in educational institutions.</p>
+            </div>
+            <div class="card-center">
+                <div class="cards-right">
+                    <img src="./images/yoga.jpg">
+                    <div class="cardd">
+                        <ul class="instruct">
+                            
+                            <li>
+                                <h4>Mary Yan</h4>
+                            </li>
+                            <li>
+                                <p>YogaInstructor</p>
+                            </li>
+                        </ul>
+                    <ul class="social-icon">
+                        <li> <a href="https://x.com/i/flow/login?lang=en"target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
 
-  <!-- Skills -->
-  <section id="skills" class="container py-5">
-    <h2 class="section-title">Skills</h2>
-    <div class="row g-4">
-      <div class="col-6 col-md-3">
-        <div class="skill-card">
-          <i class="bi bi-pencil-square skill-icon"></i>
-          <p>UI/UX</p>
-        </div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="skill-card">
-          <i class="bi bi-filetype-html skill-icon"></i>
-          <p>HTML</p>
-        </div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="skill-card">
-          <i class="bi bi-filetype-css skill-icon"></i>
-          <p>CSS</p>
-        </div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="skill-card">
-          <i class="bi bi-bootstrap skill-icon"></i>
-          <p>Bootstrap</p>
-        </div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="skill-card">
-          <i class="bi bi-github skill-icon"></i>
-          <p>GitHub</p>
-        </div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="skill-card">
-          <i class="bi bi-filetype-js skill-icon"></i>
-          <p>JavaScript</p>
-        </div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="skill-card">
-          <i class="bi bi-code-slash skill-icon"></i>
-          <p>jQuery</p>
-        </div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="skill-card">
-         <i class="fa-brands fa-react skill-icon"></i>
-          <p>React</p>
-        </div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="skill-card">
-          <i class="bi bi-filetype-php skill-icon"></i>
-          <p>PHP</p>
-        </div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="skill-card">
-          <i class="bi bi-database skill-icon"></i>
-          <p>MySQL</p>
-        </div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="skill-card">
-          <i class="bi bi-wordpress skill-icon"></i>
-          <p>WordPress</p>
-        </div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="skill-card">
-          <i class="bi bi-graph-up-arrow skill-icon"></i>
-          <p>SEO</p>
-        </div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="skill-card">
-          <i class="bi bi-layers-half skill-icon"></i>
-          <p>Laravel</p>
-        </div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="skill-card">
-          <i class="bi bi-brush skill-icon"></i>
-          <p>Photoshop</p>
-        </div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="skill-card">
-          <i class="fa-brands fa-figma skill-icon"></i>
-          <p>Figma</p>
-        </div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="skill-card">
-         <i class="fa-brands fa-figma skill-icon"></i>
-          <p>Figjam</p>
-      </div>
-  </section>
+                        <li> <a href="https://www.instagram.com/accounts/login/?hl=en" target="_blank"> <i class="fa-brands fa-instagram"></i></a></li>
+                    </ul>
+                </div>
 
-  <!-- Studies -->
-  <section id="studies" class="container py-5 reveal-card">
-  <h2 class="section-title">Studies</h2>
-  <div class="row g-4 container-fluid gap-5 px-5">
-    <div class="col-md-2 text-center shadow p-3 rounded">
-      <i class="bi bi-journal-bookmark-fill skill-icon"></i>
-      <p class="fw-bold">SSLC</p>
-      <p>SSLC Completed with 53% in 2020 at ST.Joseph Matric Hr. Sec School Madurai</p>
+            </div>
+            <div class="cards-right">
+                <img src="./images/bt.jpg">
+                <div class="cardd2">
+                    <ul class="instruct">
+
+                        <li>
+                            <h4>Catherin</h4>
+                        </li>
+                        <li>
+                            <p>Cardio</p>
+                        </li>
+                    </ul>
+                    <ul class="social-icon">
+                        <li><a href="https://x.com/i/flow/login?lang=en" target="_blank"> <i class="fa-brands fa-x-twitter"></i></a> </li>
+
+                        <li> <a href="https://www.instagram.com/accounts/login/?hl=en"target="_blank"> <i class="fa-brands fa-instagram"> </i></a> </li>
+                    </ul>
+                                </div>
+
+            </div>
+        </div>
+
     </div>
-    <div class="col-md-2 text-center shadow p-3 rounded">
-      <i class="bi bi-mortarboard-fill skill-icon"></i>
-      <p class="fw-bold">HSC</p>
-      <p>HSc completed with 83% in 2022 at ST.Joseph Matric Hr. Sec School Madurai</p>
-    </div>
-    <div class="col-md-2 text-center shadow p-3 rounded">
-      <i class="bi bi-award-fill skill-icon"></i>
-      <p class="fw-bold">BCA</p>
-      <p>My ug was completed with 70% (7.6 CGPA) in 2025 At The American College Madurai</p>
-    </div>
-    <div class="col-md-2 text-center shadow p-3 rounded">
-      <i class="bi bi-journal-richtext skill-icon"></i>
-      <p class="fw-bold">MCA</p>
-      <p>Currently Currently Pursuing PG at Kln Engineering College </p>
-  </div>
-</section>
-  <!-- Projects -->
-  <section id="projects" class="container py-5 reveal-card fade-in">
-    <h2 class="section-title">Projects</h2>
-    <div class="row">
-    <div class="col-md-6 mb-4">
-      <div class="card h-100">
-        <img src="./images/Capture4.PNG" class="card-img-top img-fluid" alt="Fetal Health Care">
-        <div class="card-body">
-          <h5 class="card-title">Fetal Health Care</h5>
+    <div class="amount">
+        <div class="heading">
+            <p>Get A Perfect Body</p>
+            <h1> Our Training Classes</h1>
         </div>
-      </div>
-    </div>
-    <div class="col-md-6 mb-4">
-      <div class="card h-100">
-        <img src="./gym 1.png" class="card-img-top img-fluid" alt="Gymso">
-        <div class="card-body">
-          <h5 class="card-title">Gymso</h5>
+        <div class="card2">
+            <div class="card">
+                <img src="./images/yogaa.jpg">
+                <div class="det">
+                    <h1>Yoga</h1>
+                    <h>₹500</h>
+                </div>
+                <div class="det-2">
+                    <p> Trained by - Bella</p>
+                    <p>Yoga enhances flexibility, balance, and mental clarity.</p>
+                </div>
+
+            </div>
+            <div class="card">
+                <img src="./images/Aerobic.jpg">
+                <div class="det">
+                    <h1>Aerobic</h1>
+                    <h>₹500</h>
+                </div>
+                <div class="det-2">
+                    <p> Trained by - Mary</p>
+                    <p>Aerobic exercises boost stamina and improve heart health.</p>
+                </div>
+
+            </div>
+            <div class="card">
+                <img src="./images/cardio.jpg">
+                <div class="det">
+                    <h1>Cardio</h1>
+                    <h>₹500</h>
+                </div>
+                <div class="det-2">
+                    <p> Trained by -Alex</p>
+                    <p>Cardio improves heart health, burns calories, and boosts overall endurance.</p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-    <div class="col-md-6 mb-4">
-      <div class="card h-100">
-        <img src="./images/s.PNG" class="card-img-top img-fluid" alt="College Finder">
-        <div class="card-body">
-          <h5 class="card-title">College Finder</h5>
+    </div>
+    <div class="table-section">
+        <p>our weekly GYM schedules</p>
+        <h1> Workout Timetable</h1>
+    </div>
+    <div class="table">
+
+
+
+
+        
+        <table>
+            <tr>
+                <td><i class="fa-solid fa-calendar-days"></i></td>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+            </tr>
+            <tr>
+                <th>7.00 AM </th>
+                <td>
+                    <h>Cardio</h>
+                    <p>7.00 AM - 9.00 AM</p>
+                </td>
+                <td>
+                    <h>Power Fitness</h>
+                    <p>7.00 AM - 9.00 AM</p>
+                </td>
+                <td></td>
+                <td></td>
+                <td>
+                    <h>Power Fitness</h>
+                    <p>7.00 AM - 9.00 AM</p>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>8.00 AM</th>
+                <td></td>
+                <td></td>
+                <td>
+                    <h>Boxing</h>
+                    <p>8.00 AM - 9.00 AM</p>
+                </td>
+                <td>
+                    <h>Aerobic</h>
+                    <p>8.00 AM - 9.00 AM</p>
+                </td>
+                <td></td>
+                <td>
+                    <h>Cardio</h>
+                    <p>8.00 AM - 9.00 AM</p>
+                </td>
+            </tr>
+            <tr>
+                <th>11.00 AM</th>
+                <td></td>
+                <td>
+                    <h>Boxing</h>
+                    <p>11.00 AM -2.00 PM</p>
+                </td>
+                <td>
+                    <h>Aerobic</h>
+                    <p>11.30 AM -3.30 PM</p>
+                </td>
+                <td></td>
+                <td>
+                    <h>Body Work</h>
+                    <p>11.50 AM </p>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>2.00 PM</th>
+                <td>
+                    <h>Boxing</h>
+                    <p>2.00 PM -4.00 PM</p>
+                </td>
+                <td>
+                    <h>Power lifting</h>
+                    <p>3.00 PM -6.00 PM</p>
+                </td>
+                <td></td>
+                <td>
+                    <h>Cardio</h>
+                    <p>6.00 PM -9.00 PM</p>
+                </td>
+                <td></td>
+                <td>
+                    <h>Cross fit</h>
+                    <p>5.00 PM -7.00 PM</p>
+                </td>
+            </tr>
+
+        </table>
+    </div> 
+       <div class="form">
+        <div class="form-left">
+            <h1>Feel free to ask anything</h1>
+            <form>
+                <input type="text" placeholder="Name" required><br>
+                <input type="email" placeholder="Email" required><br>
+                <textarea rows="10" cols="50" placeholder="Message" required></textarea> <br>
+                <button class="ter-but" input-type="submit">Send Message</button>
+
+            </form>
         </div>
-      </div>
-    </div>
-    <div class="col-md-6 mb-4">
-      <div class="card h-100">
-        <img src="./images/vm.PNG" class="card-img-top img-fluid" alt="Village Management">
-        <div class="card-body">
-          <h5 class="card-title">Village Management </h5>
+        <div class="form-right">
+            <h1>Where you can find us</h1>
+            <div class="add">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>128, KK Nagar ,Madurai</p>
+            </div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31439.76055094859!2d78.10959317291803!3d9.936448353220094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c5b8f7f59129%3A0xeebe1c5f4f461423!2sKK%20Nagar%2C%20Tamil%20Nadu%20625020!5e0!3m2!1sen!2sin!4v1734673305256!5m2!1sen!2sin"
+                width="500" height="320" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-      </div>
     </div>
-  </div>
-  </section>
 
-  <!-- Contact -->
-  <section id="contact" class="container py-5 fade-in">
-    <h2 class="section-title">Contact</h2>
-   
-     <form>
-      <div class="mb-3">
-        <label for="name" class="form-label">Name</label>
-        <input type="text" class="form-control" id="name" required>
-      </div>
-      <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" id="email" required>
-      </div>
-      <div class="mb-3">
-        <label for="message" class="form-label">Message</label>
-        <textarea class="form-control" id="message" rows="3" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-  </section>
+    <footer>
+        <div class="footer">
+            <div class="right-foot">
+                <p>Copyright 2025 Gymso Fitness.co
+                    Developed by<a href="https://www.behance.net/mayilesmayiles" target="_blank">D.Mayileshwaran</a>
+                </p>
+            </div>
+            <div class="left-foot">
 
-  <!-- Footer -->
- <footer class="bg-primary text-white pt-4 mt-5">
-  <div class="container text-center">
-    <div class="row justify-content-center">
-      <div class="col-md-3 mb-4 text-md-start">
-        <h5>Contact Me</h5>
-        <p><i class="bi bi-telephone"></i> <a href="tel:+919677929212" class="text-white text-decoration-none">+91 9677929212</a></p>
-        <p><i class="bi bi-geo-alt"></i> MADURAI</p>
-        <p><i class="bi bi-envelope"></i> <a href="mailto:mayileshwaran2005@gmail.com" class="text-white text-decoration-none">mayileshwaran2005@gmail.com</a></p>
-      </div>
-      <div class="col-md-3">
-        <h5>Follow Me</h5>
-        <div class="d-flex justify-content-center gap-3">
-          <a href="https://www.instagram.com/master_mayilesh_23/?igsh=dndmaDhwa2FsNGgw#" target="_blank" class="text-white"><i class="bi bi-instagram fs-4"></i></a>
-          <a href="https://www.linkedin.com/in/mayileshwaran-undefined-31623a33b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="text-white"><i class="bi bi-linkedin fs-4"></i></a>
-          <a href="https://www.behance.net/mayilesmayiles" target="_blank" class="text-white"><i class="bi bi-behance fs-4"></i></a>
+                <a href="mailto:Mayileshwaran2005@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i>
+                    <span>Mayileshwaran2005@gmail.com</span></a>
+
+                <a href="tel:+91 9677929212" target="_blank"><i class="fa-solid fa-phone"></i> <span> 9677929212</span>
+                </a>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="text-center mt-4">
-      <small>&copy; 2025 Mayileshwaran | All rights reserved</small>
-    </div>
-  </div>
-</footer>
+    </footer>
 
-  <!-- Return to Top Button -->
-  <button id="topBtn" title="Go to top"><i class="bi bi-arrow-up"></i></button>
-
-  <!-- JS Files -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Scroll-based fade-in animation
-    const faders = document.querySelectorAll('.fade-in');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
-    faders.forEach(fade => observer.observe(fade));
-
-    // Return to Top button functionality
-    const topBtn = document.getElementById("topBtn");
-    window.onscroll = function () {
-      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        topBtn.style.display = "block";
-      } else {
-        topBtn.style.display = "none";
-      }
-    };
-    topBtn.addEventListener("click", function () {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-    document.addEventListener("DOMContentLoaded", () => {
-  const skillsSection = document.getElementById("skills");
-  const skillCards = document.querySelectorAll("#skills .skill-card");
-
-  // Add alternating left/right classes to cards
-  skillCards.forEach((card, index) => {
-    if (index % 2 === 0) {
-      card.classList.add("left");
-    } else {
-      card.classList.add("right");
-    }
-  });
-
-  // Check if element is in viewport
-  function isInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return rect.top <= window.innerHeight - 100 && rect.bottom >= 0;
-  }
-
-  // Animate when in view
-  function animateSkills() {
-    if (isInViewport(skillsSection)) {
-      skillsSection.classList.add("show");
-      skillCards.forEach((card, index) => {
-        setTimeout(() => {
-          card.classList.add("show");
-        }, index * 100); // stagger animation
-      });
-    } else {
-      skillsSection.classList.remove("show");
-      skillCards.forEach(card => card.classList.remove("show"));
-    }
-  }
-
-  window.addEventListener("scroll", animateSkills);
-  animateSkills(); // Call on page load
-});
-document.addEventListener("DOMContentLoaded", () => {
-  const skillCards = document.querySelectorAll("#skills .skill-card");
-
-  // Add alternate direction classes
-  skillCards.forEach((card, index) => {
-    card.classList.add(index % 2 === 0 ? "slide-left" : "slide-right");
-  });
-
-  function isInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return rect.top <= window.innerHeight - 100 && rect.bottom >= 0;
-  }
-
-  function animateSkillCards() {
-    skillCards.forEach((card) => {
-      if (isInViewport(card)) {
-        card.classList.add("in-view");
-      } else {
-        card.classList.remove("in-view"); // for reverse animation
-      }
-    });
-  }
-
-  window.addEventListener("scroll", animateSkillCards);
-  animateSkillCards(); // Run on load
-});
-document.addEventListener("DOMContentLoaded", () => {
-  const projectSection = document.getElementById("projects");
-
-  function isInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return rect.top <= window.innerHeight - 100 && rect.bottom >= 0;
-  }
-
-  function animateProjects() {
-    if (isInViewport(projectSection)) {
-      projectSection.classList.add("show");
-    } else {
-      projectSection.classList.remove("show");
-    }
-  }
-
-  window.addEventListener("scroll", animateProjects);
-  animateProjects(); // on page load
-});
-document.addEventListener("DOMContentLoaded", () => {
-  const studiesSection = document.getElementById("studies");
-
-  function isInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return rect.top <= window.innerHeight - 100 && rect.bottom >= 0;
-  }
-
-  function animateStudies() {
-    if (isInViewport(studiesSection)) {
-      studiesSection.classList.add("show");
-    } else {
-      studiesSection.classList.remove("show");
-    }
-  }
-
-  window.addEventListener("scroll", animateStudies);
-  animateStudies(); // Trigger once on load
-});
-document.addEventListener("DOMContentLoaded", () => {
-  // Select all cards in projects and studies section
-  const revealElements = document.querySelectorAll("#projects .card, #studies .shadow");
-
-  function isInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return rect.top <= window.innerHeight - 100 && rect.bottom >= 0;
-  }
-
-  function animateOnScroll() {
-    revealElements.forEach((el, index) => {
-      if (isInViewport(el)) {
-        setTimeout(() => el.classList.add("show"), index * 100); // staggered animation
-      } else {
-        el.classList.remove("show");
-      }
-    });
-  }
-
-  window.addEventListener("scroll", animateOnScroll);
-  animateOnScroll(); // Initial trigger on load
-});
-</script>
-
-  
 </body>
+
 </html>
