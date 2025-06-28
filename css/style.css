@@ -25,12 +25,8 @@ nav ul li:hover a{
 .icon input{
     display: none;
 }
-.social-media li:hover{
-    color: orangered;
-}
-.icon .social-media i{
-    visibility: visible;
-}
+
+
 body {
     font-family:  sans-serif;
   }
@@ -66,11 +62,20 @@ nav ul a{
     color: white;
     font-size: 14px;
 }
-nav ul .social-media{
+ .social-media ul {
     display: flex;
     gap: 20px;
+    list-style: none;
+    text-decoration-color: none;
+    color: black;
     align-items: center;
     justify-content: center;
+}
+.social-media a{
+    color: black;
+}
+.social-media a:hover{
+    color: orangered;
 }
 .banner{
     display: flex;
@@ -521,6 +526,7 @@ form textarea{
     justify-content: center;
     flex-wrap: wrap;
     width: 90%;
+    gap: 50px;
      padding: 50px 0px 50px 0px; 
     border-top: 1px gray solid;
 }
@@ -738,6 +744,8 @@ nav ul{
 }
 }
 @media only screen and (max-width:900px){
+  
+   
     nav .icon i {
         display: block;
         color: white;
@@ -894,6 +902,10 @@ nav ul{
         justify-self: start;
         align-items: start;
     }
+    footer{
+        display: flex;
+        flex-direction: row;
+    }
     .form  .form-left{
         width: 90%;
         align-items: start;
@@ -912,17 +924,23 @@ nav ul{
         justify-content: start;
         padding-left:10%;
         gap: 20px;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     .footer.left-foot{
         width: 60%;
+         order: 2;
     }
      .footer .right-foot{
         width: 90%;
         align-items: start;
+          order:1;
         justify-content: start;
-      }
+      
  }
+ .social-media ul{
+    gap: 50px;
+    order: 3;
+    }}
  @media only screen and (max-width:767px){
     .card-center .cards-right{
         width: 100%;
@@ -996,6 +1014,7 @@ nav ul{
       .left-foot{
         flex-direction: column;
         width: 60%;
+        
         align-items: start;
         justify-content: start;
      }
